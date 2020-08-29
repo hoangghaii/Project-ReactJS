@@ -1,0 +1,31 @@
+#mainNav .navbar-nav > li > a.nav-link-active2 {
+	position: relative !important;
+	color: #fff !important;
+	margin: 0 10px;
+	padding: 0 !important;
+	display: inline-block;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background-color: #fff;
+		transform: scaleX(0);
+		transform-origin: bottom left;
+		transition: all 0.3s;
+	}
+
+	&:hover {
+		&::after {
+			transform: scaleX(1);
+			transform-origin: bottom right;
+		}
+	}
+}
+
+#mainNav .navbar-nav > li > a.nav-link-selected {
+	border-bottom: 2px solid #fff;
+}
